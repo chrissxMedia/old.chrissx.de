@@ -1,0 +1,17 @@
+{
+	"short_name": "chrissx",
+	"name": "chrissx.ga",
+	"start_url": "/?source=pwa",
+	"display": "standalone",
+	"background_color": "#202020",
+	"theme_color": "#daff77",
+	"description": "chrissx' website without content",
+	"icons":
+	[
+		{
+			"src": "logo/4000.png",
+			"sizes": "4000x4000",
+			"type": "image/png"
+		}
+	]
+}

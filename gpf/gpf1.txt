@@ -1,0 +1,209 @@
+
+
+
+
+
+
+IT Management                                             C. Haeussler
+GymPeg File 1                                            chrissx Media
+                                                         November 2018
+
+
+             GymPeg Website & Infrastructure Information
+
+Status of This Memo
+
+   This memo describes all information that was gathered about the
+   GymPeg.de website and GymPeg classroom equipment over the last
+   years. Distribution of this memo is unlimited.
+
+Notices
+
+   Copyright (c) 2018-2019 Christian E. Haeussler
+
+   Permission is granted to copy and distribute this document for any
+   purpose and without charge, including translations into other
+   languages and incorporation into compilations, provided that the
+   copyright notice and this notice are preserved, and that any
+   substantive changes or deletions from the original are clearly
+   marked.
+
+   The other GymPeg Files and a link to the latest version of this one
+   can be found at the URL <https://chrissx.ga/papers.html>
+
+Abstract
+
+   This document describes the hardware and software equipment used in
+   GymPeg computer rooms and for the GymPeg.de website.  It also
+   contains information about a few of the ideas, concepts and major
+   mistakes and other information required for GPF2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Haeussler                     Information                     [Page 1]
+
+GPF 1        GymPeg Website & Infrastructure Information November 2018
+
+
+Table of Contents
+
+   1. Introduction...................................................1
+      1.1. Purpose...................................................1
+      1.2. Intended audience.........................................2
+      1.3. Scope.....................................................2
+      1.4. Conventions...............................................2
+   2. Hardware details...............................................2
+      2.1. Server next to room A.2.X.................................2
+      2.2. Room A.2.X................................................2
+      2.3. Room A.1.25...............................................3
+      2.4. Room A.K.5................................................3
+   3. Software details...............................................p
+      3.1. Operating systems.........................................p
+           3.1.1. Terminal operating systems.........................p
+           3.1.2. Server operating systems...........................p
+      3.2. Terminal to server connection software....................p
+      3.3. Office, education and programming software................p
+   4. Acknowledgements...............................................p
+   5. Author's contact information...................................p
+   6. Commit log.....................................................p
+
+1. Introduction
+
+   1.1. Purpose
+
+      The purpose of this document is to inform the publicity about
+      the hard- and software used at GymPeg by:
+
+         * Providing all information we have about the hardware;
+
+         * Providing all information we have about the software;
+
+         * Being open about what we don't know [yet];
+
+         * Providing contact adresses for committing information to
+           this file;
+
+         * Providing links to other documents informing you about
+           exploits and tools to use to continue this project and
+           reverse-engineer other schools.
+
+      This document does not go into details about how the flaws can
+      be exploited, because that's left to GPF3. Also it does not
+      inform about how to mine this data, because GPF2 does that.
+
+
+
+
+
+
+
+Haeussler                     Information                     [Page 2]
+
+GPF 1        GymPeg Website & Infrastructure Information November 2018
+
+   1.2. Intended audience
+
+      This information is intended for people wanting to know about
+      the details of the GymPeg computer equipment. Either as a
+      prequel to GPF 3 or a sequel to GPF 2.
+
+      The text assumes a good user-level and programming computer
+      knowledge. You should be familiar with Microsoft Windows,
+      Mozilla Firefox and some of Debian to understand everything.
+
+   1.3. Scope
+
+      This document informs you about the hardware and software, it
+      does not describe the software used to get this info.
+
+   1.4. Conventions
+
+      bit: binary (base 2) digit, usually in form of electricity
+      byte: 8 bits
+      Windows: The Windows series of operating systems by Microsoft
+      WMI: Windows Management Interface, a database-like interface
+           exposed to every Windows user
+
+2. Hardware details
+
+   2.1. Server next to room A.2.?
+
+      The main server seems to be the one in the room next to room
+      A.2.?. It is hooked up to a big network switch with probably all
+      the thinclients in the 3 rooms plugged into. The CPU of the
+      server was identified as being an Intel Xeon E5-2620 v4, which
+      is an 8-core server CPU running at 2.1 to 3.0 GHz released by
+      the Intel Corporation in Q1 of 2016. The RAM seems to be ~24GB
+      in size according to WMI. The GPU is not known by now, because
+      WMI returns "Microsoft Hyper-V-Video", which stands for the
+      GPU-abstraction of Microsofts Hyper-V virtualization service
+      that the server runs.
+
+   2.2. Room A.2.?
+
+      The room A.2.? is the computer room on the second floor, as
+      indicated by the 2. This room is not special in any way, it
+      contains many thin clients and a desktop computer at the front.
+      The thin clients have the brand "Thinner Technology Pro
+      Education" shown at the boot screen and the model name "Scholar
+      500" exposed inside the Windows Embedded CE that runs on them.
+      They have about 550 Megabytes of Flash storage, 500 Megahertz
+      of CPU power, probably single-core, and about 450 Megabytes of
+      RAM. We were not able to find the computer or company online
+      [yet]. We don't know anything about the desktop [yet].
+
+
+
+Haeussler                     Information                     [Page 3]
+
+GPF 1        GymPeg Website & Infrastructure Information November 2018
+
+   2.3. Room A.1.25
+
+      The room A.1.25 is the computer room on the first floor, as
+      indicated by the 1. This room is not special in any way either,
+      it contains many thin clients and a desktop computer at the
+      front, too. The thin clients have the strings "ZBOX" and "ZOTAC"
+      at the boot screen, they also look similar to the QK7P5000.
+      Their operating systems seems to be openthinclient, which makes
+      research really hard, because it connects to the server when you
+      start it and shuts down once you disconnect from it. While this
+      mechanic can be disabled by quickly pressing Ctrl and C while it
+      boots you need a username and a password to log into it, which
+      we do not have [yet]. We do not know anything about the server
+      [yet].
+
+   2.4. Room A.K.5
+
+      The room A.K.5 is the computer room in the basement of the
+      school, as indicated by the 'K' for German "Keller". This room
+      contains many thin clients, a desktop computer and a big
+      touchscreen. The thin clients run Windows Embedded 7, so exactly
+      the same sandbox escape and system information exploits from
+      room A.2.? are applicable. The thin clients are called
+      SCHOLA-V1000VEC7 by Windows, the brand seems to be Thinner
+      Technology, again. The CPU is shown to be a Nano processor by
+      the company VIA Technology, the RAM seems to be 707 megabytes in
+      size and the internal flash storage seems to be 488 megabytes in
+      size. The exact Windows Embedded version number is shown to be
+      7.0.019.
+
+3. Software details
+
+   3.1. Operating systems
+__LIMIT: 228
