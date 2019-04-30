@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>Word Cloud Generator</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="../style/dark.css" />
 <style>
 body {
   position: relative;
-  font-family: "Helvetica Neue", sans-serif;
   width: 960px;
   margin: auto;
   margin-bottom: 1em;
@@ -36,10 +37,7 @@ a.active { text-decoration: none; color: #000; font-weight: bold; cursor: text; 
 <div style="text-align: center">
   <div id="presets"></div>
   <div id="custom-area">
-    <p><label for="text">Paste your text below!</label>
-    <p><textarea id="text">
-Lorem ipsum... no.
-    </textarea>
+    <p><textarea id="text">Lorem ipsum... no.</textarea>
     <button id="go" type="submit">Go!</button>
   </div>
 </div>
@@ -49,7 +47,6 @@ Lorem ipsum... no.
 <div style="float: right; text-align: right">
   <p><label for="max">Number of words:</label> <input type="number" value="250" min="1" id="max">
   <p><label for="per-line"><input type="checkbox" id="per-line"> One word per line</label>
-    <button id="download-svg">Download SVG</button>
 </div>
 
 <div style="float: left">
@@ -60,7 +57,6 @@ Lorem ipsum... no.
     <label for="scale-log"><input type="radio" name="scale" id="scale-log" value="log" checked="checked"> log n</label>
     <label for="scale-sqrt"><input type="radio" name="scale" id="scale-sqrt" value="sqrt"> √n</label>
     <label for="scale-linear"><input type="radio" name="scale" id="scale-linear" value="linear"> n</label>
-  <p><label for="font">Font:</label> <input type="text" id="font" value="Impact">
 </div>
 
 <div id="angles">
