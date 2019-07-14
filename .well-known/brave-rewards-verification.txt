@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: chrissx.ga
+Token: 36b761c075893dd559afd1002c642abc49ad6bc466b58f5b80a046e16c621911
