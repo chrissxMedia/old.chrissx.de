@@ -1,0 +1,14 @@
+@font-face
+{
+        font-family: 'Minecraft';
+        src:
+        url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.woff2") format("woff2"),
+        url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.woff") format("woff"),
+        url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.ttf") format("truetype"),
+        url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.svg#Minecraft") format("svg");
+}
+
+html, html *
+{
+	font-family: 'Minecraft', monospace;
+}

@@ -1,1 +1,22 @@
-{"short_name":"chrissx","name":"chrissx.ga","start_url":"/?source=pwa","display":"standalone","background_color":"#202020","theme_color":"#daff77","description":"chrissx' website without content","icons":[{"src":"logo/4096.png","sizes":"4096x4096","type":"image/png"}]}
+{
+	"short_name": "chrissx",
+	"name": "chrissx.ga",
+	"start_url": "/?source=pwa",
+	"display": "standalone",
+	"background_color": "#202020",
+	"theme_color": "#daff77",
+	"description": "chrissx' personal website",
+	"icons":
+	[
+		{
+			"src": "logo/4000.png",
+			"sizes": "4000x4000",
+			"type": "image/png"
+		},
+		{
+			"src": "logo/256t.ico",
+			"sizes": "256x256",
+			"type": "image/x-icon"
+		}
+	]
+}
