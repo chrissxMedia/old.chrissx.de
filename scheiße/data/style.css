@@ -1,0 +1,81 @@
+body 
+{
+    font-family: Arial;
+    background-color: #E8E8E8;
+}
+
+h1
+{
+   font-size: 48pt; 
+}
+
+p
+{
+    font-size: 14pt;
+}
+
+#main
+{
+    background-color: #FF0000;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ueber
+{
+    background-image: url(one_side.png);
+    height: 150px;
+}
+
+#links
+{
+    background-color: #3D37B1;
+    height: 20px;
+    padding-left: 30px;
+}
+
+#links a
+{
+    color: #FFFFFF;    
+}
+
+#links a:visited
+{
+    color: #FFFFFF;
+}
+
+#dr
+{
+    background-color: White;
+    width: 500px;
+    float: left;
+}
+#ae
+{
+    font-size: 36pt;      
+}
+
+#m
+{
+    background-color: #500000;
+    width: 300px;
+    height: 840px;
+    float: right;
+}
+
+#oe
+{
+    font-size: 36pt;
+    color: #FFFFFF;
+}
+
+#ue
+{
+    font-size: 36pt;    
+}
+
+#credits
+{
+    background-color: #008080;
+}
