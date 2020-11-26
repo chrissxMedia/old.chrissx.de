@@ -1,3 +1,4 @@
+//this is a script that basically cleans up the mess that is service workers
 caches.open('chrissx.ga').then(function(cache) {
 	cache.delete('/');
 	cache.delete('/index.html');
