@@ -1,3 +1,5 @@
 all {
-    pandoc randombeats.md -o randombeats.html
+    !pandoc randombeats.md -o randombeats.html
+    !pandoc mini_randombeats.md -o mini_randombeats.html
+    !pandoc randombattles.md -o randombattles.html
 }
