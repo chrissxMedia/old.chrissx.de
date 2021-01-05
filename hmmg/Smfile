@@ -1,0 +1,3 @@
+all {
+    pandoc randombeats.md -o randombeats.html
+}
